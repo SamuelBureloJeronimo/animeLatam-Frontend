@@ -1,0 +1,29 @@
+<p>
+    <mat-toolbar id="nav">
+      <span>
+        <a routerLink="/home">
+          <img id="logoanime" src="../../../assets/logoanime.png" alt="logo">
+        </a>
+      </span>
+      <a mat-button routerLink="/home">Inicio</a>
+      <a mat-button>Destacados</a>
+      <a mat-button routerLink="/Movies">Peliculas</a>
+      <a mat-button>Generos</a>
+
+      <div class="spacer"></div>
+      <form class="example-form" id="search-anime">
+        <mat-form-field class="example-full-width">
+            <mat-label>Anime</mat-label>
+            <input id="search" matInput [matAutocomplete]="auto" [formControl]="formActivate" placeholder="Buscar Anime...">
+            <mat-autocomplete autoActiveFirstOption="" #auto>
+              <mat-option *ngFor="let anime of this.MyAnime" [value]="anime.title">{{ anime.title }}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+      </form>
+
+      <mat-dialog-actions>
+        <button id="login" mat-raised-button color="accent" (click)="this.openDialog()"><i class="fa-solid fa-user"></i></button>
+      </mat-dialog-actions>
+    </mat-toolbar>
+  </p>
+  

@@ -1,0 +1,36 @@
+#nav{
+    background: #424242;
+    color: #fff;
+    height: 106px;
+}
+
+#logoanime{
+    width: 115px;
+    height: 95px;
+    transition: transform 0.2s ease;
+}
+
+#logoanime:hover {
+    transform: scale(1.1);
+  }
+  
+
+a{
+    margin-left: 15px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+#search-anime{
+    margin-top: 20px;
+}
+
+#login{
+    margin-left: 20px;
+    border-radius: 10%;
+}

@@ -1,0 +1,20 @@
+#title{
+    text-align: right;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#subtitle{
+    color: gray;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }

@@ -1,0 +1,17 @@
+.globalContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-image: url("../src/assets/fondo.jpg");
+    background-size: 100%;
+    color: white;
+}
+.gc-justify {
+    width: 1100px;
+    background-color: rgba(0, 0, 0, 0.316);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

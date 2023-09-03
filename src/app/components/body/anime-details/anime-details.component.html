@@ -1,0 +1,57 @@
+<main>
+    <!-- Cover Image -->
+    <div class="displayImage">
+        <div class="contentImage"><img src="{{this.anime.displayImage}}" height="100%"></div>
+    </div>
+    <!-- Body component -->
+    <div class="animeBody">
+        <div class="title">
+            <h1>{{this.anime.name}}</h1>
+            <div style="display: flex; width: max-content;">
+                <div class="genresCard" *ngFor="let gen of anime.genres"><h5 class="genres">{{gen.name}}</h5></div>
+            </div>
+        </div>
+        <h4 style="font-weight: bold; color: rgb(0, 153, 255);">Sinopsis</h4>
+        <p style="font-size: 20px;">{{this.anime.sinopsis}}</p>
+        <div style="padding: 30px;">
+            <h4 style="font-weight: bold; color: rgb(255, 0, 255);">Caracteristicas del anime</h4>
+            <h5 style="color: rgb(0, 255, 251);">Capítulos:</h5> {{anime.chapters}}
+            <h5 style="color: rgb(0, 255, 251);">Subtitulo:</h5> {{anime.subtitles}}
+            <h5 style="color: rgb(0, 255, 251);">Audio:</h5> {{anime.languages}}
+            <h5 style="color: rgb(0, 255, 251);">Fecha de lanzamiento:</h5> {{anime.launchDate}}
+        </div>
+        <h4 style="font-weight: bold; color: rgb(238, 255, 0);">Carpeta de capitulos -></h4>    
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="background-color: black;">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="chapter">
+              <th mat-header-cell *matHeaderCellDef> Capitulo </th>
+              <td mat-cell *matCellDef="let element"> {{element.chapter}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="serve">
+              <th mat-header-cell *matHeaderCellDef> Servidor </th>
+              <td mat-cell *matCellDef="let element"> {{element.serve}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="link">
+              <th mat-header-cell *matHeaderCellDef> Link </th>
+              <td mat-cell *matCellDef="let element"><div style="width: max-content;"><a class="title" href="{{element.link}}" target="_blank">Descargar</a></div></td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</main>
